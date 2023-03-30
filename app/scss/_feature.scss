@@ -1,0 +1,64 @@
+@use "mixins" as mx;
+@use "variables" as v;
+
+.feature {
+  background-color: v.$lightGrayishBlue;
+  text-align: center;
+
+  @include mx.breakpoint-up(medium) {
+    text-align: left;
+  }
+
+  &__intro {
+    margin-bottom: 3.75rem;
+
+    @include mx.breakpoint-up(large) {
+      width: 60%;
+    }
+  }
+
+  &__grid {
+    @include mx.breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    padding: 0.9375rem;
+
+    @include mx.breakpoint-up(medium) {
+      flex: 0 0 50%;
+    }
+
+    @include mx.breakpoint-up(large) {
+      flex: 1;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 1.875rem;
+
+    @include mx.breakpoint-up(large) {
+      margin-bottom: 2.75rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.15;
+    color: v.$darkBlue;
+    margin-bottom: 1rem;
+
+    @include mx.breakpoint-up(large) {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
