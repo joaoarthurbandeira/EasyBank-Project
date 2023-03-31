@@ -19,6 +19,10 @@
     background-position: center center;
     min-height: 17.5rem;
 
+    &.toggle-open {
+      z-index: -1;
+    }
+
     @include mx.breakpoint-up(medium) {
       min-height: 25rem;
       background-position: center 60%;

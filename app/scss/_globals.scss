@@ -1,6 +1,8 @@
 @forward "header";
 @forward "hero";
 @forward "feature";
+@forward "article";
+@forward "footer";
 @use "mixins" as mx;
 @use "variables" as v;
 
@@ -24,6 +26,7 @@ body {
   color: v.$grayishBlue;
   line-height: 1.3;
   min-height: 300vh;
+  overflow-x: hidden;
 
   @include mx.breakpoint-up(large) {
     font-size: v.$font-med;
